@@ -1,13 +1,13 @@
-import Letreiro from './Components/Letreiro';
+import ContadorDePessoas from './Components/ContadorDePessoas';
 import { Link } from "react-router-dom";
 
 export default function Atv02() {
     return(
         <>
             <h1>Atividade 02</h1>
-            <Letreiro />
+            <ContadorDePessoas />
             <br />
-            <Link to="/">retornar a página inicial</Link>
+            <Link to="/">Retornar a página inicial</Link>
         </>
     );
 }
