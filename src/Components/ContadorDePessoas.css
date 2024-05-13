@@ -2,6 +2,9 @@
 .container {
   margin-top: 2 0px;
   margin-left: 80px;
+  border: 2px solid black;
+  padding-left: 70px;
+  width: 250px;
 }
 
 .counter {
@@ -32,4 +35,14 @@
   padding-right: 3px;
   padding-bottom: 5px;
   padding-left: 50px;
+}
+
+.reset{
+  margin-top: 10px;
+  margin-left: 200px;
+}
+
+.total{
+  margin-left: 50px;
+  margin-bottom: 50px;
 }

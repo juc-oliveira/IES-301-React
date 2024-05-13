@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './ContadorDePessoas.css'; // Importe o arquivo CSS
+import icon_woman from './Imagens/icon_woman.png';
+import icon_man from './Imagens/icon_man.png';
+import icon_reset from './Imagens/icon_reset.png';
 
 export default function MyApp() {
   const [homens, setHomens] = useState(0);
@@ -11,12 +14,22 @@ export default function MyApp() {
     setTotal(homens + mulheres);
   }, [homens, mulheres]);
 
+  const resetValues = () => {
+    setHomens(0);
+    setMulheres(0);
+    setTotal(0);
+  };
+
   return (
     <div className="container">
+        <img src={icon_reset} className='reset' alt="icon_reset" onClick={resetValues} />
+      <div className='total'>  
         <h2>Total</h2>
         <div className="counter-box">{total}</div>
+      </div>
       <div className="counter">
       <div>
+      <img src={icon_man} alt="icon_man" />
         <div className="counter-buttons">
           <MyButton count={homens} setCount={setHomens} />
           <MyButtonMenos count={homens} setCount={setHomens} />
@@ -27,6 +40,7 @@ export default function MyApp() {
         </div>
       </div>
       <div>
+        <img src={icon_woman} alt="icon_woman" />
         <div className="counter-buttons">
           <MyButton count={mulheres} setCount={setMulheres} />
           <MyButtonMenos count={mulheres} setCount={setMulheres} />
