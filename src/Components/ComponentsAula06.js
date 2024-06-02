@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './ComponentsAula06.css';
+import './Aula06.css';
 
 //Quiz
 
